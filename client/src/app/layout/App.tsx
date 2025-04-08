@@ -16,7 +16,7 @@ function App() {
       mode: palleteType,
       background: {
         default: (palleteType === 'light')
-          ?'#121212': '#eaeaea'
+           ?'#eaeaea': '#121212'
       }
     }
   })
