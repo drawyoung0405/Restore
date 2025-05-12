@@ -13,6 +13,8 @@ namespace API.Middleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
+            //try catch around the pipeline
+            //if an exception is thrown, it will be caught here
             try
             {
                 await next(context);
