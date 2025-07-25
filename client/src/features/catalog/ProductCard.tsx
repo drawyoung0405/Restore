@@ -1,5 +1,5 @@
 
-import { Product } from '../../product'
+import { Product } from '../../models/product'
 import { Card, CardActions, CardContent, Typography } from '@mui/material'
 import { CardMedia } from '@mui/material'
 import { Button } from '@mui/material'

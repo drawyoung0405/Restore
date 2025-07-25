@@ -1,5 +1,5 @@
 
-import { Product } from '../../product'
+import { Product } from '../../models/product'
 import { Box } from '@mui/material'
 import ProductCard from './ProductCard'
 type Props = { products: Product[] }
