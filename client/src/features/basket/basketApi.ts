@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQueryWithErrorHandling } from '../../app/api/baseApi';
-import { Basket } from '../../models/basket';
+import { Basket } from '../../app/models/basket';
 export const basketApi = createApi({
     reducerPath: 'basketApi',
     baseQuery: baseQueryWithErrorHandling,
@@ -8,7 +8,7 @@ export const basketApi = createApi({
         fetchBasket: builder.query<Basket, void>({
             query: () => 'basket', 
     }),
-    addbasketItem: builder.mutation<Basket, {productId: number, quantity: number}>({
+    addBasketItem: builder.mutation<Basket, {productId: number, quantity: number}>({
         query:({productId, quantity})=>({
             url:`basket?productId=${productId}&quantity=${quantity}`,
             method: 'POST'
@@ -22,4 +22,4 @@ export const basketApi = createApi({
     })
     })
 });
-export const {useFetchBasketQuery} = basketApi
+export const {useFetchBasketQuery, useAddBasketItemMutation} = basketApi
